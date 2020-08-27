@@ -32,30 +32,25 @@ class Match3 {
             if (Rcount >= Ccount && Rcount >=3)
             {
                 j += row; 
-                /*cout << "////////////////////// MATCH ROW /////////////////\n";
-                cout << "Matching Element: " << key << endl;*/
+
                 for (j; j > row; j--)
                 {
                     arr.at(j-1).erase(arr.at(j-1).begin()+column);
                     arr.at(j - 1).push_back(1 + rand() % 5);
                 }
-               /* cout << "Updated Array :\n";
-                show(arr);*/
+
                 count += Rcount;
                 Play(arr);
                 
             }
             else if (Ccount >= Rcount && Ccount >= 3)
             {   
-                /*cout << "////////////////////// MATCH COLUMN /////////////////\n";
-                cout << "Matching Element: " << key << endl;*/
+
                 for (i; i > column; --i)
                 {
                     arr.at(row).erase(arr.at(row).begin()+ i-1);
                     arr.at(row).push_back(1 + rand() % 5);
                 }
-              /*  cout << "Updated Array :\n";
-                show(arr);*/
                 count += Ccount;
                 Play(arr);
                
