@@ -106,9 +106,10 @@ public:
     {
         for (auto i = 0; i < arr.size(); i++)
         {
+            cout << "ROW " << i+1 << ": ";
             for (auto j = 0; j < arr.at(i).size(); j++)
             {
-                cout << arr.at(i).at(j) << " ";
+                cout<<"| " << arr.at(i).at(j) << " ";
             }
             cout << endl;
         }
